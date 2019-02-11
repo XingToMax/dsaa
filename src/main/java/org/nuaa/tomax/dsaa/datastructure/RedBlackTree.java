@@ -1,4 +1,4 @@
-package org.nuaa.tomax.dsaa;
+package org.nuaa.tomax.dsaa.datastructure;
 
 /**
  * @Author: ToMax
