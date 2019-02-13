@@ -8,4 +8,5 @@ Classical data structure, algorithm learning and Java implementation
 
 ### data structure
 + red-black-tree
++ trie
 
