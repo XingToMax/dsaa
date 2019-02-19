@@ -5,6 +5,7 @@ Classical data structure, algorithm learning and Java implementation
 
 **sort** 
 + quicksort
++ heapsort
 
 **search**
 + search kth num(partition, heap)

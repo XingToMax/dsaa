@@ -1,6 +1,7 @@
 package org.nuaa.tomax.dsaa.algorithm;
 
 import org.nuaa.tomax.dsaa.algorithm.search.SearchKthNum;
+import org.nuaa.tomax.dsaa.algorithm.sort.HeapSort;
 import org.nuaa.tomax.dsaa.algorithm.sort.QuickSort;
 
 import java.util.Arrays;
@@ -58,7 +59,15 @@ public class App {
         System.out.println(SearchKthNum.searchByHeap(Arrays.copyOf(array, array.length), 13));
     }
 
+    public static void testHeapSort() {
+        int[] data = new int[]{3, 1, 6, 9, 2, 8, 0, 7, 4, 5};
+        HeapSort.sort(data);
+        for (int i : data) {
+            System.out.println(i);
+        }
+    }
+
     public static void main(String[] args) {
-        testSearchKthNum();
+        testHeapSort();
     }
 }
