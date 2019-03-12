@@ -1,10 +1,7 @@
 package org.nuaa.tomax.dsaa.algorithm;
 
 import org.nuaa.tomax.dsaa.algorithm.search.SearchKthNum;
-import org.nuaa.tomax.dsaa.algorithm.sort.BubbleSort;
-import org.nuaa.tomax.dsaa.algorithm.sort.HeapSort;
-import org.nuaa.tomax.dsaa.algorithm.sort.QuickSort;
-import org.nuaa.tomax.dsaa.algorithm.sort.Sort;
+import org.nuaa.tomax.dsaa.algorithm.sort.*;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -74,7 +71,15 @@ public class App {
         testSort(BubbleSort::sort, "bubble", 1000, 1000);
     }
 
+    public static void testInsertSort() {
+        testSort(InsertSort::sort, "insert", 1000, 1000);
+    }
+
+    public static void testMergeSort() {
+        testSort(MergeSort::sort, "merge", 100001, 10000);
+    }
+
     public static void main(String[] args) {
-        testQuickSort();
+        testMergeSort();
     }
 }
