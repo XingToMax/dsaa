@@ -37,8 +37,8 @@ public class HeapSort {
     private static void heapAdjust(int[] data, int i, int length) {
         int index = i;
         // from top to down to adjust node
-        while (index * 2 < length) {
-            index *= 2;
+        while (index * 2 + 1 < length) {
+            index = index * 2 + 1;
             // choose the bigger one in two sons
             if (index + 1 < length && data[index] < data[index + 1]) {
                 index++;

@@ -17,8 +17,8 @@ import java.util.stream.IntStream;
  */
 public class App {
     public static void testQuickSort() {
-        int dataLength = 100000;
-        int max = 100000;
+        int dataLength = 1000000;
+        int max = 1000000;
         int[] data = new int[dataLength];
         int[] answer = new int[dataLength];
         Random random = new Random();
@@ -34,7 +34,7 @@ public class App {
         Arrays.sort(answer);
         System.out.println("lib time cost : " + (System.currentTimeMillis() - beg));
         beg = System.currentTimeMillis();
-        QuickSort.sort(data);
+        HeapSort.sort(data);
         System.out.println("quicksort time cost : " + (System.currentTimeMillis() - beg));
         for (int i = 0; i < dataLength; i++) {
             assert data[i] == answer[i];
@@ -60,7 +60,7 @@ public class App {
     }
 
     public static void testHeapSort() {
-        int[] data = new int[]{3, 1, 6, 9, 2, 8, 0, 7, 4, 5};
+        int[] data = new int[]{3, 1, 6, 9, 2, 8, 0, 7, 4, 5, 1000, 766, 2, 5, 212, 314, 45, 45};
         HeapSort.sort(data);
         for (int i : data) {
             System.out.println(i);
@@ -68,6 +68,6 @@ public class App {
     }
 
     public static void main(String[] args) {
-        testHeapSort();
+        testQuickSort();
     }
 }
