@@ -22,7 +22,7 @@ public class HeapSort {
         // move the biggest to the end and adjust to keep the head is the largest range in [0 .. i)
         for (int i = data.length - 1; i > 0; i--) {
             // move the largest to the end
-            swap(data, 0, i);
+            Sort.swap(data, 0, i);
             // index after i is sorted
             heapAdjust(data, 0, i);
         }
@@ -44,23 +44,11 @@ public class HeapSort {
                 index++;
             }
             if (data[i] < data[index]) {
-                swap(data, i, index);
+                Sort.swap(data, i, index);
                 i = index;
             } else {
                 break;
             }
         }
-    }
-
-    /**
-     * swap data[a], data[b]
-     * @param data data array
-     * @param a a index
-     * @param b b index
-     */
-    private static void swap(int[] data, int a, int b) {
-        int temp = data[a];
-        data[a] = data[b];
-        data[b] = temp;
     }
 }
