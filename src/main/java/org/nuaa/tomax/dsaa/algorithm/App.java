@@ -79,7 +79,15 @@ public class App {
         testSort(MergeSort::sort, "merge", 100001, 10000);
     }
 
+    public static void testShellSort() {
+        testSort(ShellSort::sort, "shell", 10000, 10000);
+    }
+
+    public static void testSelectSort() {
+        testSort(SelectSort::sort, "select", 1000, 1000);
+    }
+
     public static void main(String[] args) {
-        testMergeSort();
+        testSelectSort();
     }
 }

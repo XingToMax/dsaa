@@ -10,6 +10,8 @@ Classical data structure, algorithm learning and Java implementation
 + bubblesort
 + insertsort
 + mergesort
++ shellsort
++ selectsort
 
 **search**
 + search kth num(partition, heap)
